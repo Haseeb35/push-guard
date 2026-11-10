@@ -94,6 +94,8 @@ Type these inside Claude Code:
 
 Done. To update later: `/plugin marketplace update push-guard`.
 
+<sub>Seeing an SSH "host key" error? Use the full URL instead: `/plugin marketplace add https://github.com/Haseeb35/push-guard.git`</sub>
+
 ### Or install it by hand
 
 **1. Download it**
