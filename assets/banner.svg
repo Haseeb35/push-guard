@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 440" width="1280" height="440" role="img" aria-labelledby="t d">
+  <title id="t">push-guard</title>
+  <desc id="d">push-guard: check before you push. Claude scans your project and blocks secrets, personal info and junk before they reach a public GitHub repo.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f1d2b"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#4ade80"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#16a34a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.78" cy="0.5" r="0.55">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.035"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="440" rx="24" fill="url(#bg)"/>
+  <rect width="1280" height="440" rx="24" fill="url(#grid)"/>
+  <rect width="1280" height="440" rx="24" fill="url(#glow)"/>
+
+  <!-- left: title -->
+  <g font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+    <g transform="translate(72 66)">
+      <path d="M14 0 L28 5 V15 C28 24 22 30 14 33 C6 30 0 24 0 15 V5 Z" fill="url(#shield)"/>
+      <path d="M8 16 l4.5 4.5 L21 11" fill="none" stroke="#0b1220" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="114" y="94" font-size="22" font-weight="600" fill="#5eead4" letter-spacing="4">A SKILL FOR CLAUDE</text>
+    <text x="66" y="200" font-size="108" font-weight="800" fill="url(#title)" letter-spacing="-3">push-guard</text>
+    <text x="72" y="256" font-size="34" font-weight="600" fill="#eef6ff">Check before you push.</text>
+    <text x="72" y="300" font-size="21" fill="#94a9c0">Claude scans your project and tells you, in plain</text>
+    <text x="72" y="330" font-size="21" fill="#94a9c0">words, what must NOT go public: API keys, .env files,</text>
+    <text x="72" y="360" font-size="21" fill="#94a9c0">personal info and secrets hiding in old commits.</text>
+  </g>
+
+  <!-- right: terminal -->
+  <g transform="translate(700 58)">
+    <rect width="520" height="324" rx="14" fill="#070c16" stroke="#1f3247"/>
+    <circle cx="24" cy="22" r="6" fill="#ff5f57"/>
+    <circle cx="44" cy="22" r="6" fill="#febc2e"/>
+    <circle cx="64" cy="22" r="6" fill="#28c840"/>
+    <text x="96" y="27" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="14" fill="#5b7088">my-app (main)</text>
+    <g font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17">
+      <text x="24" y="68" fill="#eef6ff"><tspan fill="#4ade80">you</tspan> is it safe to push?</text>
+
+      <circle cx="32" cy="104" r="7" fill="#ef4444"/>
+      <text x="50" y="110" fill="#eef6ff">OpenAI key in <tspan fill="#fca5a5">.env</tspan></text>
+      <text x="50" y="132" font-size="14" fill="#5b7088">sk-pro…9f3a · committed, not pushed</text>
+
+      <circle cx="32" cy="164" r="7" fill="#ef4444"/>
+      <text x="50" y="170" fill="#eef6ff">AWS key in an <tspan fill="#fca5a5">old commit</tspan></text>
+      <text x="50" y="192" font-size="14" fill="#5b7088">deleted, but still in history → rotate it</text>
+
+      <circle cx="32" cy="224" r="7" fill="#facc15"/>
+      <text x="50" y="230" fill="#eef6ff">node_modules/ not in .gitignore</text>
+
+      <rect x="14" y="254" width="492" height="44" rx="8" fill="#ef4444" fill-opacity="0.13" stroke="#ef4444" stroke-opacity="0.55"/>
+      <text x="30" y="282" font-weight="700" fill="#fca5a5">PUSH BLOCKED</text>
+      <text x="196" y="282" font-size="15" fill="#c4d3e3">fix 2 red items first</text>
+    </g>
+  </g>
+</svg>

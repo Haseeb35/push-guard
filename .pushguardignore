@@ -1,0 +1,3 @@
+# Eval fixture builders: they generate FAKE secrets and FAKE personal data
+# on purpose, to test push-guard. Nothing in them is real.
+skills/push-guard/evals/*/files/*

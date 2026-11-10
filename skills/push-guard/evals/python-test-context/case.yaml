@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: python-test-context
+expected_outcome: |
+  Flags the hard-coded SECRET_KEY and DATABASE_PASSWORD in recipes/settings/production.py as must-fix and suggests environment variables. Recognises the made-up passwords in tests/ and the placeholders in docs/setup.md and .env.example as fine. Notes the values stay in git history after editing. Changes nothing without asking.
+context:
+  scaffold_script: place-files.sh

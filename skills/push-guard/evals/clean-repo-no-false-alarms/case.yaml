@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: clean-repo-no-false-alarms
+expected_outcome: |
+  Says it's safe to push. Does not raise false alarms about the dummy key in tests, the placeholder in .env.example, or the support@example.com address. Changes nothing.
+context:
+  scaffold_script: place-files.sh

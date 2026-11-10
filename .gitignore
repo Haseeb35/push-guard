@@ -1,0 +1,22 @@
+# secrets (practice what we preach)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# skill-creator workspaces and eval results
+*-workspace/
+evals/results/
+skills/push-guard/evals/*/results/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
