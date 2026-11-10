@@ -83,6 +83,19 @@ quote-bot/
 
 ## 🚀 Install (2 minutes)
 
+### Claude Code: two commands
+
+Type these inside Claude Code:
+
+```
+/plugin marketplace add Haseeb35/push-guard
+/plugin install push-guard@push-guard
+```
+
+Done. To update later: `/plugin marketplace update push-guard`.
+
+### Or install it by hand
+
 **1. Download it**
 
 ```bash
@@ -96,8 +109,11 @@ git clone https://github.com/Haseeb35/push-guard.git
 | **Claude Code**, all projects | Copy `push-guard/skills/push-guard` into `~/.claude/skills/` |
 | **Claude Code**, one project | Copy it into `.claude/skills/` inside that project |
 | **Claude.ai / desktop app** | Zip the `skills/push-guard` folder and upload it in *Settings → Capabilities → Skills* |
+| **Claude API** | Upload the `skills/push-guard` folder as a custom skill ([Skills API guide](https://docs.claude.com/en/api/skills-guide)) |
 
-**3. Ask.** *"Can I push this?"*, *"check my repo for secrets"*, *"I want to open-source this"*. You don't need to say "push-guard"; Claude uses it automatically.
+### Then just ask
+
+*"Can I push this?"*, *"check my repo for secrets"*, *"I want to open-source this"*. You don't need to say "push-guard"; Claude uses it automatically.
 
 **You need:** `git` and Python 3.8+. **Nothing to install**: the scanner uses only Python's standard library. If you happen to have [gitleaks](https://github.com/gitleaks/gitleaks), push-guard uses it as an extra detector.
 
@@ -169,6 +185,7 @@ Exit codes: `0` safe, `1` check the yellow items, `2` push blocked. Drop it into
 ## 📁 What's inside
 
 ```
+.claude-plugin/marketplace.json    ← lets Claude Code install it with /plugin
 skills/push-guard/
 ├── SKILL.md                       ← the instructions Claude follows
 ├── scripts/scan.py                ← the read-only scanner (Python standard library only)

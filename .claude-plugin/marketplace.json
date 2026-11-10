@@ -1,0 +1,22 @@
+{
+  "name": "push-guard",
+  "owner": {
+    "name": "Haseeb",
+    "email": "160282576+Haseeb35@users.noreply.github.com"
+  },
+  "metadata": {
+    "description": "Check before you push: stop API keys, .env files, personal info and secrets in old commits from going public.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "push-guard",
+      "description": "Scans a project before it goes to GitHub and explains in plain words what should not be public (API keys, passwords, .env files, private keys, personal info, internal URLs, secrets in git history), then helps fix it safely.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/push-guard"
+      ]
+    }
+  ]
+}
